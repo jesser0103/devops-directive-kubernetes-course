@@ -9,6 +9,11 @@ on:
     paths:
       # Only rebuild images when applications change
       - "06-demo-application/**/*"
+      - ".github/workflows/image-ci.yml"
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   generate-image-tag:
@@ -114,5 +119,5 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           base: main
-          token: ${{ secrets.DEVOPS_DIRECTIVE_KUBERNETES_COURSE_GITHUB_ACTION_PAT }}
+          token: ${{ github.token }}
           title: "Update image tags to (${{ needs.generate-image-tag.outputs.image_tag }})"

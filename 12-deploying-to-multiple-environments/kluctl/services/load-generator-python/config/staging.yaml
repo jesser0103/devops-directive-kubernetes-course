@@ -1,2 +1,2 @@
 loadGeneratorPython:
-  version: foobarbaz # STAGING_IMAGE_TAG
+  version: 0.1.0-3-g1e04d59 # STAGING_IMAGE_TAG

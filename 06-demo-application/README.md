@@ -9,6 +9,8 @@
 - **Postgres Database:** An empty PostgreSQL database with no tables or data. Used to show how to set up connectivity. The API applications execute `SELECT NOW() as now;` to determine the current time to return.
 - **Python Load Generator:** Queries one of either the Node.js or Go APIs at a configurable speed.
 
+Changes under this directory trigger the GitHub Actions image workflow, which rebuilds and publishes the application images.
+
 ![](./readme-assets/request-diagram.png)
 
 The demo application builds upon the one used in the [DevOps Directive Docker Course](https://github.com/sidpalas/devops-directive-docker-course/tree/main/05-example-web-application).

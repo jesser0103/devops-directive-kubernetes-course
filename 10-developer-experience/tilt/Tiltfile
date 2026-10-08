@@ -1,0 +1,8 @@
+include('../../06-demo-application/api-golang/Tiltfile')
+include('../../06-demo-application/api-node/Tiltfile')
+include('../../06-demo-application/client-react/Tiltfile')
+include('../../06-demo-application/load-generator-python/Tiltfile')
+local_resource(
+  'traefik-forward',
+  serve_cmd='kubectl port-forward -n traefik svc/traefik 8081:80',
+)

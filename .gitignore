@@ -1,0 +1,11 @@
+bin/
+**/.DS_STORE
+.venv/
+**/.venv/
+node_modules/
+**/node_modules/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+tmp/
+**/tmp/

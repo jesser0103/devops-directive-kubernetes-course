@@ -29,10 +29,17 @@ There are a variety of method for keeping the deployed state Kubernetes manifest
 
 A full GitOps example (using our configurations from `12-deploying-to-multiple-environments`) with kluctl is implemented in `./kluctl-gitops`.
 
-For local testing with a kind cluster using the `kind-kind` Kubernetes context, both
-`deploy-staging-cluster` and `deploy-production-cluster` are configured to use the
-local cluster. The production task is only a local production-target simulation;
-it does not deploy to the remote GKE production cluster.
+For local testing, create two kind clusters and use separate Kubernetes contexts:
+
+```bash
+kind create cluster --name staging
+kind create cluster --name production
+```
+
+The `deploy-staging-cluster` task uses `kind-staging`, and
+`deploy-production-cluster` uses `kind-production`. Both are local simulations
+of their respective environments; they do not use the remote staging or GKE
+production clusters.
 
 ```bash
 cd 14-cicd/kluctl-gitops

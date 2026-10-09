@@ -1,6 +1,11 @@
 version: "3"
 
 tasks:
+  deploy-kind-cluster:
+    desc: "Deploy kluctl gitops to the local kind cluster"
+    cmds:
+      - kluctl deploy -t kind
+
   deploy-staging-cluster:
     desc: "Deploy kluctl gitops staging target"
     cmds:

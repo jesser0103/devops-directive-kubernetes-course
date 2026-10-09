@@ -1,5 +1,10 @@
 # .kluctl.yaml
 targets:
+  - name: kind
+    args:
+      cluster_name: kind
+    context: kind-kind
+
   - name: staging
     args:
       cluster_name: staging

@@ -1,4 +1,10 @@
 targets:
+  - name: kind
+    args:
+      environment: staging
+      environmentType: local
+    context: kind-staging
+
   - name: staging
     args:
       environment: staging

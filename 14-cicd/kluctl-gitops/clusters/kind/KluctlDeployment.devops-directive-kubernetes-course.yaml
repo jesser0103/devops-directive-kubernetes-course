@@ -9,7 +9,7 @@ spec:
     git:
       url: https://github.com/jesser0103/devops-directive-kubernetes-course.git
       path: 12-deploying-to-multiple-environments/kluctl
-  target: staging
+  target: kind
   context: default
   prune: true
   delete: true

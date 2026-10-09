@@ -1,0 +1,2 @@
+service:
+  type: {% if args.environmentType == "local" %}NodePort{% else %}LoadBalancer{% endif %}
